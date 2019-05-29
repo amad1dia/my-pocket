@@ -2,73 +2,39 @@
 <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
+
+        <TextView
+                android:id="@+id/item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Titre de la recette"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="16dp"
+                android:textSize="18sp"
+                app:fontFamily="@font/roboto_bold"
+                tools:layout_editor_absoluteX="8dp"/>
+
+    <TextView
+            android:id="@+id/item_date"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            app:cardElevation="7dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="8dp">
+            android:fontFamily="@font/roboto_thin"
+            android:text="description de la recette"
+            app:layout_constraintTop_toBottomOf="@+id/item_title" android:layout_marginTop="12dp"
+            tools:layout_editor_absoluteX="16dp" app:fontFamily="@font/roboto_thin"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"/>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            <TextView
-                    android:id="@+id/item_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="17dp"
-                    android:layout_marginLeft="17dp"
-                    android:layout_marginTop="48dp"
-                    android:text="Titre de la recette"
-                    app:layout_constraintStart_toEndOf="@+id/imageView2"
-                    app:layout_constraintTop_toTopOf="parent"/>
-
-            <TextView
-                    android:id="@+id/item_date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="25dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="2dp"
-                    android:text="date de la recette"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
-
-            <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="54dp"
-                    android:layout_height="59dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/item_date"
-                    app:srcCompat="@drawable/ic_call_made_black_24dp"/>
-
-            <TextView
-                    android:id="@+id/item_amount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="17dp"
-                    android:layout_marginLeft="17dp"
-                    android:layout_marginBottom="16dp"
-                    android:text="Montant de la recette"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/imageView2"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
+    <TextView
+            android:id="@+id/item_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="10000"
+            tools:layout_editor_absoluteY="16dp" tools:layout_editor_absoluteX="318dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
